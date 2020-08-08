@@ -1,27 +1,33 @@
 
-print("Hello, welcome to my game!")
-value = raw_input("What is your name?")
-print("Let us play a game!")
-print("This is a number guessing games")
+print('Hello, welcome to my game!')
+name = raw_input('What is your name?' + ":")
+print(str(name) +  ',Let us play a game!')
 
 import random
 
-hidden = random.randrange(1, 201)
-print(hidden)
+flag = True
+while flag:
+    num = input('Type a number for an upper bound: ')
+    if num.isdigit() :
+        print("Let's Play!")
+        num = int(num)
+        flag = False
+    else:
+        print('Please type a valid number')
 
-guess = int(input("Please guess a number"))
+secret = random.randint(1,num)
 
-if guess == hidden:
-    print("Correct answer!")
-elif guess < hidden:
-    print("You're too low")
-else:
-    print("You're too high")
+guess = None
+count = 5
 
-# while loop
-# index = 0
-# while True:
-#     print(index)
-#     index += 0
-#     if index < 10:
-#         break;
+while guess != secret:
+    guess = input('Please type a number between 1 and ' + str(num) +":  ")
+    if guess.isdigit() :
+        guess = int(guess)
+
+        if guess == secret:
+            print('Correct')
+        else:
+            print('Try again')    
+            count += 1
+print('It took you', count, 'guesses!')            
