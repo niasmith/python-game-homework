@@ -52,7 +52,7 @@
 ### Bonus
 * Deploy the guessing game in python version 2.7 & 3.8.4
 
-## ❤ **_Happy Coding_** ❤
-![](/pythonHomework/images/TechBridgeLogo.png)
+
+![](4b5473.gif)
 
 # python-game-homework
