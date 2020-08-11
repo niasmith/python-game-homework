@@ -8,8 +8,8 @@ import random
 flag = True
 while flag:
     num = input('Type a number for an upper bound: ')
-    if num.isdigit() :
-        print("Let's Play!")
+    if str(num).isdigit():
+        print("Let's go y'all!")
         num = int(num)
         flag = False
     else:
@@ -18,16 +18,20 @@ while flag:
 secret = random.randint(1,num)
 
 guess = None
-count = 5
+count = 1
 
 while guess != secret:
     guess = input('Please type a number between 1 and ' + str(num) +":  ")
-    if guess.isdigit() :
+    if str(guess).isdigit() :
         guess = int(guess)
 
+        if guess < secret:
+            print('Too low, guess again!')  
+        if guess > secret:
+            print('Too high, try again!')   
+         
         if guess == secret:
-            print('Correct')
-        else:
-            print('Try again')    
+            print('Correct')               
             count += 1
-print('It took you', count, 'guesses!')            
+
+print('It took you', str(count), 'guesses!')            
