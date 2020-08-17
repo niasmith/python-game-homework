@@ -53,6 +53,6 @@
 * Deploy the guessing game in python version 2.7 & 3.8.4
 
 
-![](4b5473.gif)
+![](Hnet-image.gif)
 
 # python-game-homework
